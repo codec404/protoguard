@@ -5,7 +5,7 @@ go 1.25
 require (
 	github.com/getkin/kin-openapi v0.137.0
 	github.com/spf13/cobra v1.10.2
-	google.golang.org/protobuf v1.36.5
+	google.golang.org/protobuf v1.36.11
 )
 
 require (
