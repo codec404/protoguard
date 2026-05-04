@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package pgtest;
+
+// New revision: removed field 1 (breaking). Same file name as v1.
+
+message Item {
+  int32 code = 2;
+}
+
+service Catalog {
+  rpc Get(Item) returns (Item);
+}

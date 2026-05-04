@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          # govulncheck@v1.3+ requires Go ≥1.25; stable toolchain reduces noisy stdlib findings.
+          go-version: stable
+      - name: Test
+        run: |
+          go test ./... -count=1
+          go vet ./...
+      - name: Govulncheck
+        run: go run golang.org/x/vuln/cmd/govulncheck@v1.3.0 ./...

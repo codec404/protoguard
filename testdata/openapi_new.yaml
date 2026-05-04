@@ -1,0 +1,11 @@
+openapi: 3.0.3
+info:
+  title: T
+  version: "1"
+paths:
+  /cats:
+    get:
+      operationId: listCats
+      responses:
+        "200":
+          description: ok

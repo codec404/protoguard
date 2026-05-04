@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package pgtest;
+
+// Old revision — keep same filename `catalog.proto` as v2 so FileDescriptorSet diffs align.
+
+message Item {
+  string title = 1;
+}
+
+service Catalog {
+  rpc Get(Item) returns (Item);
+}
