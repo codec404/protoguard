@@ -3,7 +3,7 @@ module github.com/codec404/protoguard
 go 1.25
 
 require (
-	github.com/getkin/kin-openapi v0.137.0
+	github.com/getkin/kin-openapi v0.138.0
 	github.com/spf13/cobra v1.10.2
 	google.golang.org/protobuf v1.36.11
 )
